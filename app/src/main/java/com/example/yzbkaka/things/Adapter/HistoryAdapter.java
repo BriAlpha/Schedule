@@ -12,9 +12,6 @@ import com.example.yzbkaka.things.db.Plan;
 
 import java.util.List;
 
-/**
- * Created by yzbkaka on 19-4-12.
- */
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
     private List<Plan> mDataList;
@@ -40,7 +37,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.history_item,parent,false);  //加载子项布局
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.history_item,parent,false);  //view object
         final ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -49,7 +46,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder , final int position){
         Plan plan = mDataList.get(position);
-        holder.time.setText(plan.getMonth() + "月" + plan.getDay() + "日");
+        holder.time.setText(plan.getMonth() + "month" + plan.getDay() + "day");
         holder.history.setText(plan.getWritePlan());
     }
 

@@ -45,20 +45,20 @@ public class HistoryActivity extends AppCompatActivity {
             }
         });
 
-        clear.setOnClickListener(new View.OnClickListener() {  //点击之后会清空列表
+        clear.setOnClickListener(new View.OnClickListener() {  //clear the list once clicked
             @Override
             public void onClick(View view) {
-                Toast.makeText(HistoryActivity.this, "清空！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HistoryActivity.this, "now empty", Toast.LENGTH_SHORT).show();
                 historyList.clear();
-                myAdapter.notifyDataSetChanged();  //适配器在每一次list更新的时候都需要进行一次更新
-                LitePal.deleteAll(Plan.class,"status = ?","1");  //删除所有status为true的plan
+                myAdapter.notifyDataSetChanged();  //refresh the adapter each time the list is updated
+                LitePal.deleteAll(Plan.class,"status = ?","1");  //delete all the plans whose status is true from the database
             }
         });
 
         if(dataList.size() > 0){
             historyList.clear();
             for(Plan plan : dataList){
-                if(plan.getStatus() == true){  //如果状态是完成，则加入到历史列表当中
+                if(plan.getStatus() == true){  //if the status is true(complete), then add to the historyList
                     historyList.add(plan);
                 }
             }
