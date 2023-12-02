@@ -74,7 +74,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
         final Plan plan = mDataList.get(i);
         holder.todayText.setText(plan.getWritePlan());
 
-        final Handler handler = new Handler() {  //异步消息处理机制来在非主线程中来修改UI
+        final Handler handler = new Handler() {  //Asynchronous message handling mechanism to modify UI in non-main thread
 
             public void handleMessage(Message msg){
                 switch (msg.what){
@@ -113,7 +113,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
                 ImagePlan.save();  //Save the state
                 todayCount--;  //After removal, the quantity is reduced by 1
 
-                TimerTask task1 = new TimerTask() {  //设置定时任务
+                TimerTask task1 = new TimerTask() {  //Setting a scheduled Task
                     public void run() {
                         Message message = new Message();
                         message.what = 1;
@@ -139,7 +139,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
             }
         });
 
-        holder.todayView.setOnClickListener(new DoubleClickListener() {  //双击事件
+        holder.todayView.setOnClickListener(new DoubleClickListener() {  //Double click event
             @Override
             public void onDoubleClick(View view) {
                 Intent alarmsIntent = new Intent(AlarmClock.ACTION_SET_ALARM);  //Call system alarm
