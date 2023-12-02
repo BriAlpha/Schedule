@@ -39,7 +39,7 @@ import static com.example.yzbkaka.things.Today.NoteActivity.todayAdapter;
 
 public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> {
     private List<Plan> mDataList;
-    private static int imagePosition;  //将点击前面框框顺序的位置设置为静态变量
+    private static int imagePosition;  //Set the position of the clicked checkbox in the front as a static variable
 
     static class ViewHolder extends RecyclerView.ViewHolder{
         View todayView;
@@ -63,7 +63,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.today_item,parent,false);  //加载子项布局
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.today_item,parent,false);  //Load sub-item layout
         final ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -79,9 +79,9 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
             public void handleMessage(Message msg){
                 switch (msg.what){
                     case 1:
-                        mDataList.remove(imagePosition);  //将该Plan从列表中移除（此时数据库中的没有移除）
-                        todayAdapter.notifyDataSetChanged();  //更新适配器以达到更新列表的效果
-                        holder.imageView.setImageResource(R.drawable.no);  //将前面的框框换回成灰色
+                        mDataList.remove(imagePosition);  //Remove the Plan from the list (there is no removal in the database at this time)
+                        todayAdapter.notifyDataSetChanged();  //Update the adapter to update the list
+                        holder.imageView.setImageResource(R.drawable.no);  //Change the front box back to gray
                         break;
 
                     default:
@@ -90,7 +90,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
             }
         };
 
-        holder.todayView.setOnClickListener(new View.OnClickListener() {  //当点击文字时会进入修改activity
+        holder.todayView.setOnClickListener(new View.OnClickListener() {  //When you click the text, you enter the Modify activity
             @Override
             public void onClick(View view) {
                 int writePosition = holder.getAdapterPosition();
@@ -103,36 +103,36 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
         });
 
 
-        holder.imageView.setOnClickListener(new View.OnClickListener() {  //当点击前面的勾选框时会改变勾选框的图片
+        holder.imageView.setOnClickListener(new View.OnClickListener() {  //When you click on the previous checkbox, the picture of the checkbox changes
             @Override
             public void onClick(View view) {
                 imagePosition = holder.getAdapterPosition();
                 Plan ImagePlan = mDataList.get(imagePosition);
-                holder.imageView.setImageResource(R.drawable.yes);  //切换图片
-                ImagePlan.setStatus(true);  //状态设置为完成
-                ImagePlan.save();  //保存该状态
-                todayCount--;  //移除之后数量减1
+                holder.imageView.setImageResource(R.drawable.yes);  //Switch picture
+                ImagePlan.setStatus(true);  //The status is set to Done
+                ImagePlan.save();  //Save the state
+                todayCount--;  //After removal, the quantity is reduced by 1
 
                 TimerTask task1 = new TimerTask() {  //设置定时任务
                     public void run() {
                         Message message = new Message();
                         message.what = 1;
-                        handler.sendMessage(message);  //发送异步Message
+                        handler.sendMessage(message);  //Send asynchronous Message
                     }
                 };
                 Timer timer = new Timer();
-                timer.schedule(task1, 800);  //设置延时的时间，单位是毫秒
+                timer.schedule(task1, 800);  //Set the delay time in milliseconds
 
-                Animation animation = AnimationUtils.loadAnimation(view.getContext(),R.anim.today_anim);  //设置动画
+                Animation animation = AnimationUtils.loadAnimation(view.getContext(),R.anim.today_anim);  //Set animation
                 holder.todayView.startAnimation(animation);
             }
         });
 
 
-        holder.todayView.setOnLongClickListener(new View.OnLongClickListener() {  //长按机制
+        holder.todayView.setOnLongClickListener(new View.OnLongClickListener() {  //Long press mechanism
             @Override
-            public boolean onLongClick(View view) {  //长按效果
-                holder.delete.setVisibility(View.VISIBLE);  //将删除按钮显示出来
+            public boolean onLongClick(View view) {  //Long press effect
+                holder.delete.setVisibility(View.VISIBLE);  //The delete button is displayed
 
 
                 return true;
@@ -142,21 +142,20 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
         holder.todayView.setOnClickListener(new DoubleClickListener() {  //双击事件
             @Override
             public void onDoubleClick(View view) {
-                Intent alarmsIntent = new Intent(AlarmClock.ACTION_SET_ALARM);  //调用系统闹钟
-                view.getContext().startActivity(alarmsIntent);
+                Intent alarmsIntent = new Intent(AlarmClock.ACTION_SET_ALARM);  //Call system alarm
             }
         });
 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int deletePosition = holder.getAdapterPosition();  //得到点击的顺序
+                int deletePosition = holder.getAdapterPosition();  //Get the click order
                 Plan deletePlan = mDataList.get(deletePosition);
                 String deletePlanWrite = deletePlan.getWritePlan();
                 mDataList.remove(deletePosition);
-                todayCount--;  //数量减少
-                todayAdapter.notifyDataSetChanged();  //更新适配器
-                LitePal.deleteAll(Plan.class,"writePlan = ?",deletePlanWrite);  //将该条today删除
+                todayCount--;  //Decrease in number
+                todayAdapter.notifyDataSetChanged();  //Update adapter
+                LitePal.deleteAll(Plan.class,"writePlan = ?",deletePlanWrite);  //Delete this article today
 
 
                 TimerTask deleteTask = new TimerTask() {
@@ -166,7 +165,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
                     }
                 };
                 Timer deleteTimer = new Timer();
-                deleteTimer.schedule(deleteTask,0);  //一秒钟之后自动隐藏删除按钮
+                deleteTimer.schedule(deleteTask,0);  //The delete button is automatically hidden after one second
             }
         });
     }
