@@ -2,7 +2,7 @@ package com.example.yzbkaka.things.Schedule;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,12 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.yzbkaka.things.R;
-import com.example.yzbkaka.things.Today.AlterTodayActivity;
 import com.example.yzbkaka.things.db.Plan;
 
 import org.litepal.LitePal;
-
-import static com.example.yzbkaka.things.MainActivity.todayCount;
 
 public class AlterScheduleActivity extends AppCompatActivity {
     private EditText editText;

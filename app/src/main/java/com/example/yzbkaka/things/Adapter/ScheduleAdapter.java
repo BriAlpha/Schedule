@@ -1,7 +1,7 @@
 package com.example.yzbkaka.things.Adapter;
 
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.Schedule.AlterScheduleActivity;
-import com.example.yzbkaka.things.Today.AlterTodayActivity;
 import com.example.yzbkaka.things.db.Plan;
 
 import org.litepal.LitePal;

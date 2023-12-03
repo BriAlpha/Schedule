@@ -3,7 +3,7 @@ package com.example.yzbkaka.things.Adapter;
 import android.content.Intent;
 import android.os.Message;
 import android.provider.AlarmClock;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yzbkaka.things.DoubleClickListener;
-import com.example.yzbkaka.things.MainActivity;
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.Today.AlterTodayActivity;
-import com.example.yzbkaka.things.Today.NoteActivity;
 import com.example.yzbkaka.things.db.Plan;
 
 

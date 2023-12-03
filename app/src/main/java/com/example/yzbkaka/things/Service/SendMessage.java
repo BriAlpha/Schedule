@@ -11,7 +11,7 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.SystemClock;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.Today.NoteActivity;

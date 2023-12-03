@@ -3,7 +3,7 @@ package com.example.yzbkaka.things.Setting;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import com.example.yzbkaka.things.ActivityCollector;
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.Service.SendMessage;
-import com.prolificinteractive.materialcalendarview.WeekView;
 
 public class SettingActivity extends AppCompatActivity {
     private Button checkSendMessage;
