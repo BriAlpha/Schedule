@@ -47,7 +47,8 @@ public class SendMessage extends Service {
                                 .setWhen(System.currentTimeMillis())  //Time to send the notification
                                 .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo144))  //Set large icon
                                 .setContentIntent(pendingIntent)  //Set the click effect of the notification
-                                .setAutoCancel(true)  //Set to automatically turn off notifications when clicked
+                                .setAutoCancel(true) //Set to automatically turn off notifications when clicked
+                                .build();
 
                         if(todayCount > 0){
                             manager.notify(1,notification);  //Display notification
