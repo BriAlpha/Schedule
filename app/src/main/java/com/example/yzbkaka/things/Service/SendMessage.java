@@ -33,40 +33,39 @@ public class SendMessage extends Service {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                if(count%2 == 0){  //根据次数来切换图片
-                    Intent notificationIntent = new Intent(SendMessage.this,NoteActivity.class);  //开始设置通知效果
-                    PendingIntent pendingIntent = PendingIntent.getActivity(SendMessage.this,0, notificationIntent,0);  //设置PendingIntent
+                if(count%2 == 0){  //Switch images according to the number of times
+                    Intent notificationIntent = new Intent(SendMessage.this,NoteActivity.class);  //Start setting the notification effect
+                    PendingIntent pendingIntent = PendingIntent.getActivity(SendMessage.this,0, notificationIntent,0);  //Set PendingIntent
                     NotificationManager manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){  //判断系统是否大于8.0
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){  //Check whether the value is greater than 8.0
                         NotificationChannel notificationChannel = new NotificationChannel("channel","channel",NotificationManager.IMPORTANCE_HIGH);
                         manager.createNotificationChannel(notificationChannel);
                         Notification notification = new NotificationCompat.Builder(SendMessage.this,"channel")
-                                .setContentTitle("任务清单已送达")
-                                .setContentText("小主，今天还有" + todayCount + "件任务要完成哦！")
-                                .setWhen(System.currentTimeMillis())  //发送通知的时间
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo144))  //设置大图标
-                                .setContentIntent(pendingIntent)  //设置通知的点击效果
-                                .setAutoCancel(true)  //设置点击之后自动关闭通知
-                                .build();
+                                .setContentTitle("The task list has been delivered")
+                                .setContentText("Lord, there's more today" + todayCount + "tasks to complete oh!")
+                                .setWhen(System.currentTimeMillis())  //Time to send the notification
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo144))  //Set large icon
+                                .setContentIntent(pendingIntent)  //Set the click effect of the notification
+                                .setAutoCancel(true)  //Set to automatically turn off notifications when clicked
 
                         if(todayCount > 0){
-                            manager.notify(1,notification);  //显示通知
+                            manager.notify(1,notification);  //Display notification
                         }
                     }
 
                     else{
                         Notification notification = new NotificationCompat.Builder(SendMessage.this)
-                                .setContentTitle("今天的任务清单")
-                                .setContentText("小主今天还有" + todayCount + "件计划要完成哦！")
-                                .setWhen(System.currentTimeMillis())  //发送通知的时间
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo144))  //设置大图标
-                                .setContentIntent(pendingIntent)  //设置通知的点击效果
-                                .setAutoCancel(true)  //设置点击之后自动关闭通知
+                                .setContentTitle("Today's to-do list")
+                                .setContentText("The little master still has today" + todayCount + "tasks to complete oh!")
+                                .setWhen(System.currentTimeMillis())  //Time to send the notification
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.logo144))  //Set large icon
+                                .setContentIntent(pendingIntent)  //Set the click effect of the notification
+                                .setAutoCancel(true)  //Set to automatically turn off notifications when clicked
                                 .build();
 
                         if(todayCount > 0){
-                            manager.notify(1,notification);  //显示通知
+                            manager.notify(1,notification);  //Display notification
                         }
                     }
                 }
@@ -77,8 +76,8 @@ public class SendMessage extends Service {
             }
         }).start();
 
-        AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);  //设置定时服务
-        int fourHour = 4*60*60*1000;  //单位是毫秒（4小时）
+        AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);  //Set timing service
+        int fourHour = 4*60*60*1000;  //The unit is milliseconds (4 hours).
         long time = SystemClock.elapsedRealtime() + fourHour;
         Intent i = new Intent(this,SendMessage.class);
         PendingIntent pi = PendingIntent.getService(this,0,i,0);

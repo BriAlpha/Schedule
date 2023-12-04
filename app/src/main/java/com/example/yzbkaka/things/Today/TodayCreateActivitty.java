@@ -31,6 +31,7 @@ public class TodayCreateActivitty extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today_create_activitty);
         editText = (EditText)findViewById(R.id.edit_text);
+        editText.setHint("Write down your plans for today!");
         finish = (Button)findViewById(R.id.finish);
 
         calendar = Calendar.getInstance();  //Getting instances
