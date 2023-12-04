@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.yzbkaka.things.History.HistoryActivity;
 import com.example.yzbkaka.things.Log.LogActivity;
+import com.example.yzbkaka.things.Record.RecordActivity;
 import com.example.yzbkaka.things.Schedule.ScheduleViewActivity;
 import com.example.yzbkaka.things.Setting.SettingActivity;
 import com.example.yzbkaka.things.Today.NoteActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button schedule;
     private Button log;
     private Button history;
+    private Button record;
     private Button openDrawer;
     private Button setting;
     DrawerLayout mDrawerLayout;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         schedule = (Button)findViewById(R.id.select_plan);
         log = (Button)findViewById(R.id.select_log);
         history = (Button)findViewById(R.id.select_history);
+        record = (Button)findViewById(R.id.select_record);
         openDrawer = (Button)findViewById(R.id.open_drawer);
         setting = (Button)findViewById(R.id.setting);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.draw_layout);
@@ -70,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        record.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecordActivity.class);
                 startActivity(intent);
             }
         });

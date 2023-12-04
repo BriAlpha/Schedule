@@ -35,6 +35,17 @@
             android:name=".Schedule.ScheduleCreateActivity"
             android:theme="@style/MyTheme1"
             android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".Record.AnalyzeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.RecordListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Record.RecordActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+        </activity>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -48,4 +48,6 @@ dependencies {
     implementation 'org.litepal.android:java:3.0.0'
 //    implementation 'com.pr7olificinteractive:material-calendarview:1.4.3'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    //MPAndroidChart
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }
