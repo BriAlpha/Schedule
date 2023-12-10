@@ -16,6 +16,7 @@ import com.example.yzbkaka.things.Record.RecordActivity;
 import com.example.yzbkaka.things.Schedule.ScheduleViewActivity;
 import com.example.yzbkaka.things.Setting.SettingActivity;
 import com.example.yzbkaka.things.Today.NoteActivity;
+import com.example.yzbkaka.things.tomato.TomatoActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -95,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                Intent intent = new Intent(MainActivity.this, TomatoActivity.class);
                 startActivity(intent);
             }
         });

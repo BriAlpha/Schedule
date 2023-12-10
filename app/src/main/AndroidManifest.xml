@@ -46,6 +46,7 @@
             android:exported="true"
             android:windowSoftInputMode="stateVisible|adjustPan">
         </activity>
+        <activity android:name=".tomato.TomatoActivity" />
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
