@@ -36,6 +36,18 @@
 
     </RelativeLayout>
 
+    <!-- EditText 用于用户输入时间 -->
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Start"
+        />
+
     <TextView
         android:id="@+id/timerTextView"
         android:layout_width="wrap_content"
@@ -44,17 +56,7 @@
         android:layout_marginTop="283dp"
         android:text="25:00"
         android:textSize="40sp"
-        tools:ignore="UnknownId" />
-
-    <!-- EditText 用于用户输入时间 -->
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/timerTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Start" />
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/editTextTime"
