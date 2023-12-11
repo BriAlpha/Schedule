@@ -38,7 +38,12 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
+    <!-- Dialog theme -->
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <!-- Add other dialog-specific styles if needed -->
+    </style>
 
 
-
+    <color name="colorBackground">#D15536</color>
 </resources>
