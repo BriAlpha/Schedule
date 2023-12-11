@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button log;
     private Button history;
     private Button record;
+    private Button tomato;
     private Button openDrawer;
     private Button setting;
     DrawerLayout mDrawerLayout;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         log = (Button)findViewById(R.id.select_log);
         history = (Button)findViewById(R.id.select_history);
         record = (Button)findViewById(R.id.select_record);
+        tomato = (Button)findViewById(R.id.select_tomato);
         openDrawer = (Button)findViewById(R.id.open_drawer);
         setting = (Button)findViewById(R.id.setting);
         mDrawerLayout = (DrawerLayout)findViewById(R.id.draw_layout);
@@ -86,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tomato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TomatoActivity.class);
+                startActivity(intent);
+            }
+        });
+
         openDrawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,8 +106,7 @@ public class MainActivity extends AppCompatActivity {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-                Intent intent = new Intent(MainActivity.this, TomatoActivity.class);
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent);
             }
         });
