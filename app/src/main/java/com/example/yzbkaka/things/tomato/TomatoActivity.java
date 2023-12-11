@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,8 +39,12 @@ public class TomatoActivity extends AppCompatActivity {
     }
 
     private void startTimer() {
-        // 实现计时逻辑，例如使用 CountDownTimer 类
-        countDownTimer = new CountDownTimer(25 * 60 * 1000, 1000) {
+        // 获取用户输入的时间
+        EditText editTextTime = findViewById(R.id.editTextTime);
+        int customTime = Integer.parseInt(editTextTime.getText().toString());
+
+        // 实现计时逻辑，使用用户输入的时间
+        countDownTimer = new CountDownTimer(customTime * 60 * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 updateTimerText(millisUntilFinished);
@@ -54,6 +59,7 @@ public class TomatoActivity extends AppCompatActivity {
         startButton.setText("Pause");
         isTimerRunning = true;
     }
+
 
     private void stopTimer() {
         if (countDownTimer != null) {
