@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
         android:background="?attr/selectableItemBackground">
 
 
@@ -20,7 +21,7 @@
             android:layout_height="27dp"
             android:layout_marginLeft="16dp"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/no"/>
+            android:src="@drawable/no"/>
 
         <TextView
             android:id="@+id/schedule_time"
@@ -34,7 +35,8 @@
 
         <TextView
             android:id="@+id/schedule_plan"
-            android:layout_width="247dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="3dp"
@@ -42,14 +44,21 @@
             android:textColor="#000"
             android:text="233"/>
 
-        <Button
+        <ImageView
             android:id="@+id/delete_schedule"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/delete"
-            android:visibility="invisible"/>
-
+            />
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/alt_finish"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/yes2"
+            />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,12 +1,14 @@
 package com.example.yzbkaka.things.Schedule;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.db.Plan;
@@ -45,6 +47,7 @@ public class ScheduleCreateActivity extends AppCompatActivity {
                     plan.setYear(scheduleYear);
                     plan.setMonth(scheduleMonth);
                     plan.setDay(scheduleDay);
+                    plan.setStatus(false);/////
                     date = new Date(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.DATE));
                     plan.save();
                     Toast.makeText(ScheduleCreateActivity.this, "Created successfully, remember to finish it", Toast.LENGTH_SHORT).show();
