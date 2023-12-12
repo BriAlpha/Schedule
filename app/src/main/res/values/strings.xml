@@ -20,10 +20,4 @@
         <item>Work</item>
         <!-- 添加更多选项 -->
     </string-array>
-
-    <string-array name="priority_array">
-        <item>Urgent (Red)</item>
-        <item>Normal (Yellow)</item>
-        <item>Low (Green)</item>
-    </string-array>
 </resources>
