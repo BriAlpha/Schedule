@@ -70,7 +70,6 @@
             android:name=".Schedule.AlterScheduleActivity"
             android:theme="@style/MyTheme1"
             android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity android:name=".Setting.AboutActivity"></activity>
     </application>
 
 </manifest>
