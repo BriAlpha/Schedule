@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tomato/Record"
+            android:textColor="#000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginLeft="16sp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/explain_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/explain_one"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+
+            <ImageView
+                android:id="@+id/explain_button_one"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="1.“Tomato”是基于番茄工作法的计时简单工具"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_two"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_two"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="2.在“Tomato”中，您需要选择计时类型，名字和时间。接着按下“Start”， 会开始倒计时"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_three"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_three"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="3.“Tomato”会强制开始倒计时，并且在计时结束以后把您的工作记录在“Record”中"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/explain_four"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_four"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="4.在“Recrod”中，您可以主动记录您的工作信息，记录同样会记录在“Record”中"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/explain_five"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/explain_button_five"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:text="5.“Record”提供了时间分析服务，可以把您所有的记录可视化。同时您也可以选择删除所有记录，通过“Clear”"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

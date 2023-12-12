@@ -11,9 +11,9 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,43 +23,43 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
+                    android:layout_centerInParent="true"
                     android:text="Schedule"
                     android:textColor="#000"
-                    android:layout_centerInParent="true"/>
+                    android:textSize="24sp" />
 
                 <Button
                     android:id="@+id/open_drawer"
                     android:layout_width="38sp"
                     android:layout_height="38sp"
-                    android:layout_marginLeft="19sp"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="19sp"
                     android:background="@drawable/menu"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible" />
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#e6e6e6"/>
+                android:background="#e6e6e6" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp">
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:background="@drawable/img"/>
+                    android:background="@drawable/img" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -70,32 +70,32 @@
                         android:id="@+id/select_today"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/today"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/today" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Today"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="Today"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground">
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -106,33 +106,33 @@
                         android:id="@+id/select_plan"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/date"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/date" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Plan"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="Plan"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
             </LinearLayout>
 
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground">
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -143,33 +143,33 @@
                         android:id="@+id/select_log"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/log"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/log" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Log"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="Log"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
             </LinearLayout>
 
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground">
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -180,32 +180,32 @@
                         android:id="@+id/select_history"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/history"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/history" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="History"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="History"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground">
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -216,33 +216,33 @@
                         android:id="@+id/select_record"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/record"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/record" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Record"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="Record"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground">
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -253,82 +253,74 @@
                         android:id="@+id/select_tomato"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"/>
+                        android:background="?attr/selectableItemBackground" />
 
                     <ImageView
                         android:layout_width="25sp"
                         android:layout_height="25sp"
-                        android:background="@drawable/tomato"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"/>
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/tomato" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="13sp"
                         android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Tomato"
                         android:textColor="#000"
-                        android:textSize="20sp"
-                        android:text="Tomato"/>
+                        android:textSize="20sp" />
                 </FrameLayout>
 
             </LinearLayout>
 
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="165dp"
+                    android:orientation="horizontal">
 
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/setting" />
 
-
-           <RelativeLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:background="?attr/selectableItemBackground">
-
-               <LinearLayout
-                   android:orientation="horizontal"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentBottom="true"
-                   android:layout_marginLeft="165dp">
-
-                   <ImageView
-                       android:layout_width="15dp"
-                       android:layout_height="15dp"
-                       android:background="@drawable/setting"
-                       android:layout_marginTop="10dp" />
-
-                   <Button
-                       android:id="@+id/setting"
-                       android:layout_width="35dp"
-                       android:layout_height="35dp"
-                       android:textColor="#bfbfbf"
-                       android:textSize="14sp"
-                       android:background="#00000000"
-                       android:text="Set"/>
-               </LinearLayout>
-           </RelativeLayout>
+                    <Button
+                        android:id="@+id/setting"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:background="#00000000"
+                        android:text="Setting/Help"
+                        android:textColor="#bfbfbf"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#000">
 
-
-
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:background="#000"
-           android:layout_gravity="start">
-
-           <ImageView
-               android:layout_width="200dp"
-               android:layout_height="200dp"
-               android:layout_centerInParent="true"
-               android:src="@mipmap/rpz" />
-       </RelativeLayout>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/rpz" />
+        </RelativeLayout>
 
     </androidx.drawerlayout.widget.DrawerLayout>
-
 
 
 </LinearLayout>

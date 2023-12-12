@@ -16,9 +16,11 @@ import com.example.yzbkaka.things.Service.SendMessage;
 public class SettingActivity extends AppCompatActivity {
     private Button checkSendMessage;
     private Button back;
-    private LinearLayout explain;
-    private LinearLayout about;
-    private LinearLayout exit;
+    private LinearLayout explain_schedule;
+    private LinearLayout explain_log;
+    private LinearLayout explain_tomato;
+//    private LinearLayout about;
+//    private LinearLayout exit;
     public static int count = 0;
     private Button dark;
 
@@ -29,9 +31,11 @@ public class SettingActivity extends AppCompatActivity {
         ActivityCollector.addActivity(this);
         checkSendMessage = (Button) findViewById(R.id.check_send);
         back = (Button)findViewById(R.id.back);
-        explain = (LinearLayout)findViewById(R.id.how_to_use);
-        about = (LinearLayout)findViewById(R.id.about);
-        exit = (LinearLayout)findViewById(R.id.exit);
+        explain_schedule = (LinearLayout)findViewById(R.id.how_to_use_today);
+        explain_tomato = (LinearLayout)findViewById(R.id.how_to_use_tomato);
+        explain_log = (LinearLayout)findViewById(R.id.how_to_use_log);
+//        about = (LinearLayout)findViewById(R.id.about);
+//        exit = (LinearLayout)findViewById(R.id.exit);
 
         if(count%2 == 0){
             checkSendMessage.setBackgroundResource(R.drawable.checkno);
@@ -56,28 +60,45 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-        explain.setOnClickListener(new View.OnClickListener() {
+        explain_schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent explainIntent = new Intent(SettingActivity.this,ExplainActivity.class);
+                Intent explainIntent = new Intent(SettingActivity.this, ExplainActivity_Today.class);
                 startActivity(explainIntent);
             }
         });
 
-        about.setOnClickListener(new View.OnClickListener() {
+        explain_tomato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent aboutIntent = new Intent(SettingActivity.this,AboutActivity.class);
-                startActivity(aboutIntent);
+                Intent explainTomatoIntent = new Intent(SettingActivity.this,ExplainActivity_Tomato.class);
+                startActivity(explainTomatoIntent);
             }
         });
 
-        exit.setOnClickListener(new View.OnClickListener() {
+        explain_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityCollector.finishAll();
+                Intent explainLogIntent = new Intent(SettingActivity.this, ExplainActivity_Log.class);
+                startActivity(explainLogIntent);
             }
         });
+
+
+//        about.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent aboutIntent = new Intent(SettingActivity.this,AboutActivity.class);
+//                startActivity(aboutIntent);
+//            }
+//        });
+//
+//        exit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ActivityCollector.finishAll();
+//            }
+//        });
 
 
         back.setOnClickListener(new View.OnClickListener() {

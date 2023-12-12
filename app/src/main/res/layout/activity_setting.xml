@@ -16,17 +16,17 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="24dp"
+                android:layout_marginLeft="110dp"
                 android:layout_marginTop="17dp"
-                android:layout_marginLeft="127dp"
-                android:background="@drawable/setting"/>
+                android:background="@drawable/setting" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textSize="22sp"
+                android:text="Setting/Help"
                 android:textColor="#000"
-                android:text="设置" />
+                android:textSize="22sp" />
 
             <Button
                 android:id="@+id/back"
@@ -61,7 +61,7 @@
                     android:layout_marginTop="12dp"
                     android:textColor="#000000"
                     android:textSize="17dp"
-                    android:text="发送通知"/>
+                    android:text="Send Message"/>
 
                 <Button
                     android:id="@+id/check_send"
@@ -85,7 +85,7 @@
 
 
         <LinearLayout
-            android:id="@+id/how_to_use"
+            android:id="@+id/how_to_use_today"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,7 +103,7 @@
                     android:layout_marginTop="12dp"
                     android:textColor="#000000"
                     android:textSize="17dp"
-                    android:text="Schedule使用概括"/>
+                    android:text="Today/Plan Help"/>
 
 
                 <ImageView
@@ -122,9 +122,8 @@
             </RelativeLayout>
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/about"
+            android:id="@+id/how_to_use_log"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,7 +141,8 @@
                     android:layout_marginTop="12dp"
                     android:textColor="#000000"
                     android:textSize="17dp"
-                    android:text="关于"/>
+                    android:text="Log Help"/>
+
 
                 <ImageView
                     android:layout_width="23dp"
@@ -150,7 +150,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="13dp"
-                    android:background="@drawable/about"/>
+                    android:background="@drawable/explain"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -160,9 +160,8 @@
             </RelativeLayout>
         </LinearLayout>
 
-
         <LinearLayout
-            android:id="@+id/exit"
+            android:id="@+id/how_to_use_tomato"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -180,7 +179,8 @@
                     android:layout_marginTop="12dp"
                     android:textColor="#000000"
                     android:textSize="17dp"
-                    android:text="退出"/>
+                    android:text="Tomato/Record Help"/>
+
 
                 <ImageView
                     android:layout_width="23dp"
@@ -188,7 +188,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="13dp"
-                    android:background="@drawable/exit"/>
+                    android:background="@drawable/explain"/>
 
                 <View
                     android:layout_width="match_parent"

@@ -63,7 +63,9 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Setting.ExplainActivity" />
+        <activity android:name=".Setting.ExplainActivity_Today" />
+        <activity android:name=".Setting.ExplainActivity_Tomato" />
+        <activity android:name=".Setting.ExplainActivity_Log" />
         <activity
             android:name=".Schedule.AlterScheduleActivity"
             android:theme="@style/MyTheme1"
