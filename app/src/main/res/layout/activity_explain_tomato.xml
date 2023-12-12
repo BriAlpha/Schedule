@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="1.“Tomato”是基于番茄工作法的计时简单工具"
+                android:text="1.&quot;Tomato&quot; is a simple timer tool based on the Pomodoro Technique."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="2.在“Tomato”中，您需要选择计时类型，名字和时间。接着按下“Start”， 会开始倒计时"
+                android:text="2. In &quot;Tomato,&quot; you need to choose the timer type, name, and duration. Then, press &quot;Start&quot; to begin the countdown."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="3.“Tomato”会强制开始倒计时，并且在计时结束以后把您的工作记录在“Record”中"
+                android:text="3. &quot;Tomato&quot; will forcefully initiate the countdown and record your work in &quot;Record&quot; after the timer ends."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="4.在“Recrod”中，您可以主动记录您的工作信息，记录同样会记录在“Record”中"
+                android:text="4. In &quot;Record,&quot; you can manually log your work information, and the entries will be recorded in the &quot;Record&quot; section as well."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="5.“Record”提供了时间分析服务，可以把您所有的记录可视化。同时您也可以选择删除所有记录，通过“Clear”"
+                android:text="5. &quot;Record&quot; provides time analysis services, allowing you to visualize all your entries. Additionally, you can choose to delete all records through the &quot;Clear&quot; option."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>

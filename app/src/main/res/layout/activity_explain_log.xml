@@ -55,9 +55,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:textSize="16dp"
+                android:text="1. If you want to jot down important notes, you can use the &quot;Note&quot; feature."
                 android:textColor="#000"
-                android:text="1.如果想要记下一些重要事项，可以使用“便签”功能"/>
+                android:textSize="16dp" />
         </LinearLayout>
 
     </LinearLayout>

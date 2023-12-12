@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:text="1.在“今天”中点击右下角按钮即可开始创建当日任务"
+                android:text="1. Click the bottom-right button in &quot;Today&quot; to start creating tasks for the day."
                 android:textColor="#000"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -82,9 +82,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:textSize="16dp"
+                android:text="2. In &quot;Plan,&quot; you can set tasks you want to do in the future. When the day arrives, they will automatically appear in the task list for that day."
                 android:textColor="#000"
-                android:text="2.在“计划”中可以设定未来想要做的任务，当那一天到来时会自动显示到当天的任务列表中"/>
+                android:textSize="16dp" />
         </LinearLayout>
 
 
@@ -108,9 +108,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:textSize="16dp"
+                android:text="4. If you want to check completed tasks, you can view them in the &quot;History&quot; section."
                 android:textColor="#000"
-                android:text="4.如果想要查询已经完成的任务，可以在“历史”中查看"/>
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -133,9 +133,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="7dp"
-                android:textSize="16dp"
+                android:text="5. Once a task is completed, you can click the checkbox in front of it to mark it as done."
                 android:textColor="#000"
-                android:text="5.如果完成了上述任务就可以点击前面的对勾进行消除"/>
+                android:textSize="16dp" />
         </LinearLayout>
 
     </LinearLayout>
