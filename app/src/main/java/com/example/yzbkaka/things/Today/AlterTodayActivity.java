@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ArrayAdapter;
 
 import com.example.yzbkaka.things.R;
 import com.example.yzbkaka.things.db.Plan;
@@ -20,6 +22,7 @@ import static com.example.yzbkaka.things.MainActivity.todayCount;
 public class AlterTodayActivity extends AppCompatActivity {
     private EditText editText;
     private Button finish;
+    private Spinner prioritySpinner;
     Plan plan = new Plan();
     String oldWrite;
 
@@ -30,13 +33,20 @@ public class AlterTodayActivity extends AppCompatActivity {
 
         editText = (EditText) findViewById(R.id.old_text);
         finish = (Button)findViewById(R.id.finish);
+        prioritySpinner = (Spinner)findViewById(R.id.priority_spinner);
+        // Set up the spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.priority_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        prioritySpinner.setAdapter(adapter);
         Intent intent = getIntent();
         oldWrite = intent.getStringExtra("write");  //Get the previous data
         editText.setText(oldWrite);  //Display the previous data on the EditText
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newWrite = editText.getText().toString();  //Get the new data after user modification
+                String newWrite = editText.getText().toString();//Get the new data after user modification
+                String selectedPriority = prioritySpinner.getSelectedItem().toString();
                 if(newWrite.isEmpty()){
                     LitePal.deleteAll(Plan.class,"writePlan = ?",oldWrite);  //Automatically deleted if empty after modification
                     todayCount--;  //After deletion, the number of statistics is reduced by 1
