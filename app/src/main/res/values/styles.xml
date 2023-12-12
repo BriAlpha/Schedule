@@ -43,7 +43,13 @@
         <item name="android:windowBackground">@color/colorBackground</item>
         <!-- Add other dialog-specific styles if needed -->
     </style>
+    <!-- Dialog theme -->
+    <style name="AppTheme.Dialog2" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/colorBackground2</item>
+        <!-- Add other dialog-specific styles if needed -->
+    </style>
 
 
-    <color name="colorBackground">#D15536</color>
+    <color name="colorBackground">#F44336</color>
+    <color name="colorBackground2">#00BCD4</color>
 </resources>

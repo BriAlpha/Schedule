@@ -1,4 +1,4 @@
-package com.example.yzbkaka.things.tomato;
+package com.example.yzbkaka.things.Tomato;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,7 +19,6 @@ import android.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.yzbkaka.things.R;
-import com.example.yzbkaka.things.Record.RecordActivity;
 import com.example.yzbkaka.things.Record.RecordListActivity;
 import com.example.yzbkaka.things.db.UserRecord;
 
@@ -122,7 +121,7 @@ public class TomatoActivity extends AppCompatActivity {
                 }
             }.start();
 
-            startButton.setText("Pause");
+            startButton.setText("Stop");
             isTimerRunning = true;
 
             // 将时钟和按钮设置为可见

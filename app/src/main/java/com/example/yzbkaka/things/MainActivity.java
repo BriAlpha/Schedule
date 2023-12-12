@@ -16,7 +16,7 @@ import com.example.yzbkaka.things.Record.RecordActivity;
 import com.example.yzbkaka.things.Schedule.ScheduleViewActivity;
 import com.example.yzbkaka.things.Setting.SettingActivity;
 import com.example.yzbkaka.things.Today.NoteActivity;
-import com.example.yzbkaka.things.tomato.TomatoActivity;
+import com.example.yzbkaka.things.Tomato.TomatoActivity;
 
 
 public class MainActivity extends AppCompatActivity {
