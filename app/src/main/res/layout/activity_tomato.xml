@@ -16,7 +16,7 @@
             android:layout_height="25dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="147dp"
-            android:background="@drawable/date"/>
+            android:background="@drawable/tomato"/>
 
         <TextView
             android:layout_width="wrap_content"
