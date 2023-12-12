@@ -8,35 +8,42 @@
 
 
     <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/yes2"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/yes2"/>
 
-    <EditText
-        android:id="@+id/old_text"
-        android:layout_width="290dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:textSize="20dp"
-        android:hint="Write down your plan for today!"
-        android:singleLine="true"/>
+        <EditText
+            android:id="@+id/old_text"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"
+            android:hint="Write down your plan for today!"
+            android:singleLine="true"/>
 
-    <Button
-        android:id="@+id/finish"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/enter"/>
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/enter"/>
 
+
+        <Spinner
+            android:id="@+id/priority_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/priority_array"
+            android:spinnerMode="dropdown" />
     </LinearLayout>
 
 </LinearLayout>
