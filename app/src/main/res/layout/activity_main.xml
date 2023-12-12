@@ -127,41 +127,7 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:background="?attr/selectableItemBackground"
-                android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:background="@drawable/backblank">
-
-                    <Button
-                        android:id="@+id/select_log"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground" />
-
-                    <ImageView
-                        android:layout_width="25sp"
-                        android:layout_height="25sp"
-                        android:layout_marginLeft="20sp"
-                        android:layout_marginTop="15sp"
-                        android:background="@drawable/log" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60sp"
-                        android:layout_marginTop="13sp"
-                        android:text="Log"
-                        android:textColor="#000"
-                        android:textSize="20sp" />
-                </FrameLayout>
-            </LinearLayout>
 
 
             <LinearLayout
@@ -213,6 +179,43 @@
                     android:background="@drawable/backblank">
 
                     <Button
+                        android:id="@+id/select_tomato"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="15sp"
+                        android:background="@drawable/tomato" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60sp"
+                        android:layout_marginTop="13sp"
+                        android:text="Tomato"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="@drawable/backblank">
+
+                    <Button
                         android:id="@+id/select_record"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -237,6 +240,7 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -250,7 +254,7 @@
                     android:background="@drawable/backblank">
 
                     <Button
-                        android:id="@+id/select_tomato"
+                        android:id="@+id/select_log"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="?attr/selectableItemBackground" />
@@ -260,19 +264,19 @@
                         android:layout_height="25sp"
                         android:layout_marginLeft="20sp"
                         android:layout_marginTop="15sp"
-                        android:background="@drawable/tomato" />
+                        android:background="@drawable/log" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="60sp"
                         android:layout_marginTop="13sp"
-                        android:text="Tomato"
+                        android:text="Log"
                         android:textColor="#000"
                         android:textSize="20sp" />
                 </FrameLayout>
-
             </LinearLayout>
+
 
 
             <RelativeLayout
