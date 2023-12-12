@@ -14,10 +14,9 @@ public class Plan extends LitePalSupport {
     String year;
     String month;
     String day;
-    boolean status;  //The default value is false
-    Date createTime;  //Time of creation
+    boolean status;  //默认值为false
+    Date createTime;  //创建的时间
 
-    private String priority;
 
     public int getId() {
         return id;
@@ -71,19 +70,8 @@ public class Plan extends LitePalSupport {
         return createTime;
     }
 
-
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
-    }
-
-    // Setter method for the createTime field
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-
 
 }
