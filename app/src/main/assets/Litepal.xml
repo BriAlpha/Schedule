@@ -4,8 +4,8 @@
     <version value="3"></version>
 
     <list>
-        <mapping class="com.example.yzbkaka.things.db.Plan"></mapping>
-        <mapping class="com.example.yzbkaka.things.db.Log"></mapping>
-        <mapping class="com.example.yzbkaka.things.db.UserRecord"></mapping>
+        <mapping class="com.example.can301.things.db.Plan"></mapping>
+        <mapping class="com.example.can301.things.db.Log"></mapping>
+        <mapping class="com.example.can301.things.db.UserRecord"></mapping>
     </list>
 </litepal>
