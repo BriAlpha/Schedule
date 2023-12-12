@@ -19,6 +19,7 @@ import com.example.yzbkaka.things.Today.AlterTodayActivity;
 import com.example.yzbkaka.things.db.Plan;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -37,27 +38,35 @@ import static com.example.yzbkaka.things.Today.NoteActivity.todayAdapter;
 
 public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> {
     private List<Plan> mDataList;
+    private List<Plan> mPlanList; // Declaration of the list
     private static int imagePosition;  //Set the position of the clicked checkbox in the front as a static variable
 
     static class ViewHolder extends RecyclerView.ViewHolder{
         View todayView;
         ImageView imageView;
-        TextView todayText;
+        TextView priorityView;
         Button delete;
 
         public ViewHolder(View view){
             super(view);
             todayView = view;
             imageView = (ImageView)view.findViewById(R.id.no_finish);
-            todayText = (TextView)view.findViewById(R.id.today_plan);
+//          todayText = (TextView)view.findViewById(R.id.today_plan);
+            priorityView = view.findViewById(R.id.priority_text_view); // Initialize the new TextView
             delete = (Button)view.findViewById(R.id.delete);
         }
     }
 
 
-    public TodayAdapter(List<Plan> dataList){
-        mDataList = dataList;
+
+    public TodayAdapter(List<Plan> planList) {
+        if (planList != null) {
+            mPlanList = planList;
+        } else {
+            mPlanList = new ArrayList<>(); // Initialize with an empty list instead of null
+        }
     }
+
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -67,10 +76,13 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
     }
 
 
+
+
     @Override
-    public void onBindViewHolder(final ViewHolder holder , final int i){
-        final Plan plan = mDataList.get(i);
-        holder.todayText.setText(plan.getWritePlan());
+    public void onBindViewHolder(ViewHolder holder, int position){
+        Plan plan = mPlanList.get(position);
+        String priority = plan.getPriority();
+        holder.priorityView.setText(priority);
 
         final Handler handler = new Handler() {  //Asynchronous message handling mechanism to modify UI in non-main thread
 
@@ -171,7 +183,7 @@ public class TodayAdapter extends RecyclerView.Adapter<TodayAdapter.ViewHolder> 
 
 
     @Override
-    public int getItemCount(){
-        return mDataList.size();
+    public int getItemCount() {
+        return (mPlanList != null) ? mPlanList.size() : 0;
     }
 }
